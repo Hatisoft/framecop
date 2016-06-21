@@ -4,6 +4,8 @@
   "description": "fremwork comparator that register stats from know webs and adds static analysis",
   "main": "index.js",
   "scripts": {
+    "start": "webpack",
+    "dev": "webpack-dev-server --hot --inline --config webpack.config.js",
     "test": "mocha test"
   },
   "repository": {
@@ -26,7 +28,9 @@
     "chai": "^3.4.1",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "express": "^4.14.0"
