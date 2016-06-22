@@ -1,15 +1,19 @@
-module.exports = {
-    entry: {
-        index: './client/index.js'
-    },
-    output:{
-        path: __dirname+ "/bin",
-        filename: '[name].js'
-    },
-    module:{
-        //loaders[]
-    },
-  resolve: {
-    extensions: ['', '.js']
-  }
-}
+var path = require('path');
+var webpack = require('webpack');
+
+var config = {
+  context: path.join(__dirname),
+  entry: {
+    index: ['./client/index.js', 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000']
+  },
+  output: {
+    path: path.join(__dirname, 'www'),
+    filename: '[name].js'
+  },
+  plugins: [
+      new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin()
+  ]
+};
+module.exports = config;
