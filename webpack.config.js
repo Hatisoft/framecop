@@ -8,7 +8,8 @@ var config = {
   },
   output: {
     path: path.join(__dirname, 'www'),
-    filename: '[name].js'
+    filename: '[name].js',
+    publicPath: '/assets/'
   },
   plugins: [
       new webpack.optimize.OccurrenceOrderPlugin(),

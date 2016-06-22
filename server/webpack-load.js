@@ -7,6 +7,7 @@ var compiler = webpack(webpackConfig);
 function loadwebpack(app){
     app.use(webpackDevMiddleware(compiler, {
       hot: true,
+      publicPath: '/assets/',
       stats: {
         colors: true,
       },
