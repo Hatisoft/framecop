@@ -9,7 +9,6 @@ if(isDevMode)
 
 app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname + '/../client/index.html'));
-    //res.send('<body>Hello World<script src=\'index.js\'></script></body>');
 });
 
 var server = app.listen(3000, function () {
