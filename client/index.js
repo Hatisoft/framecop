@@ -6,7 +6,14 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 
 var Foo = Vue.extend({
-    template: '<p>This is foo!</p>'
+    template: '<p>This is foo!</p>',
+    ready: function() {
+        this.$http.get("/api/framework").then(function(response) {
+            console.log(response.data);
+        }, function(response) {
+            console.error(response.status);
+        });
+    }
 });
 
 var Bar = Vue.extend({
