@@ -6,7 +6,15 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 
 var Foo = Vue.extend({
-    template: '<p>This is foo!</p>',
+    template: '<p>This is foo!</p>'
+});
+
+var Bar = Vue.extend({
+    template: '<p>This is bar!</p>'
+});
+
+var Main = Vue.extend({
+    template: '<h1>Welcome</h1>',
     ready: function() {
         this.$http.get("/api/framework").then(function(response) {
             console.log(response.data);
@@ -16,14 +24,14 @@ var Foo = Vue.extend({
     }
 });
 
-var Bar = Vue.extend({
-    template: '<p>This is bar!</p>'
-});
-
 var App = Vue.extend({});
+
 var router = new VueRouter();
 
 router.map({
+    '/': {
+        component: Main
+    },
     '/foo': {
         component: Foo
     },
@@ -31,5 +39,9 @@ router.map({
         component: Bar
     }
 });
+
+router.redirect({
+  '*': '/'
+})
 
 router.start(App, '#app');
