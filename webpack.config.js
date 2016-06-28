@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var config = {
   context: path.join(__dirname),
   entry: [
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    'webpack-hot-middleware/client?reload=true',
     './client/index.js'
   ],
   output: {
