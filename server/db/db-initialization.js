@@ -14,6 +14,9 @@ function dbInitialize(app){
       app.connections = models.connections;
 
       app.models.framework.create({ name: 'vue.js', language: 'javascript' }).then(console.log).catch(console.error);
+      app.models.framework.create({ name: 'react', language: 'javascript' }).then(console.log).catch(console.error);
+      app.models.framework.create({ name: 'angular', language: 'javascript' }).then(console.log).catch(console.error);
+      app.models.framework.create({ name: 'boost', language: 'c++' }).then(console.log).catch(console.error);
     });
 }
 
