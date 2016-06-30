@@ -11,6 +11,10 @@ router.get('/', function(req, res) {
     });
 });
 
+router.post('/', function(req, res) {
+        res.send(req.body.name);
+});
+
 router.get('/:lang/:page', function(req, res) {
     var limit = 10;
     var skip = parseInt(req.params.page, 10) * limit;
