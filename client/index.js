@@ -14,18 +14,28 @@ router.map({
         component: function (resolve) {
             require(['./views/main.vue'], resolve);
         },
+        name: 'main',
         auth: false
     },
     '/search': {
         component: function (resolve) {
             require(['./views/search.vue'], resolve);
         },
+        name: 'search',
         auth: false
     },
     '/request': {
         component: function (resolve) {
             require(['./views/request.vue'], resolve);
         },
+        name: 'request',
+        auth: true
+    },
+    '/framework/:name': {
+        component: function (resolve) {
+            require(['./views/framework.vue'], resolve);
+        },
+        name: 'framework',
         auth: true
     }
 });
