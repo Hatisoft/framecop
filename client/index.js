@@ -5,9 +5,11 @@ var VueResource = require('vue-resource');
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
-var App = Vue.extend({});
-
 var router = new VueRouter();
+
+Vue.use(require('vue-jwt-auth'), {}, router);
+
+var App = Vue.extend({});
 
 router.map({
     '/': {
@@ -36,16 +38,8 @@ router.map({
             require(['./views/framework.vue'], resolve);
         },
         name: 'framework',
-        auth: true
+        auth: false
     }
-});
-
-router.beforeEach(function (transition) {
-    if (transition.to.auth)
-        console.log('need to check auth');
-    else
-        console.log('no need to check auth');
-    transition.next();
 });
 
 router.redirect({
