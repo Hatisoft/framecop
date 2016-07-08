@@ -1,6 +1,7 @@
 var Vue = require('vue');
 var VueRouter = require('vue-router');
 var VueResource = require('vue-resource');
+var App = require('./views/app.vue');
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -8,8 +9,6 @@ Vue.use(VueResource);
 var router = new VueRouter();
 
 Vue.use(require('vue-jwt-auth'), {}, router);
-
-var App = Vue.extend({});
 
 router.map({
     '/': {

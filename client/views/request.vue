@@ -13,6 +13,3 @@ module.exports = {
     }
 }
 </script>
-
-<style>
-</style>
