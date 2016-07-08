@@ -10,6 +10,8 @@ var router = new VueRouter();
 
 Vue.use(require('vue-jwt-auth'), {}, router);
 
+Vue.http.headers.common.Authorization = localStorage.getItem('jwt-auth-token');
+
 router.map({
     '/': {
         component: function (resolve) {
