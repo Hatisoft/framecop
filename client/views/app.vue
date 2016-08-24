@@ -27,9 +27,8 @@
     </div>
 </template>
 
-<style>
-body {
+<style lang="stylus">
+body
     padding-top: 70px;
     font-family: Helvetica, sans-serif;
-}
 </style>

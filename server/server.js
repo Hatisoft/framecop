@@ -8,11 +8,10 @@ var dbInitialization = require('./db/db-initialization.js');
 
 var isDevMode = process.argv.includes('--dev');
 
-dbInitialization(app);
-
 if(isDevMode)
     require('./webpack-load')(app);
 
+dbInitialization(app);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
