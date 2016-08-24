@@ -4,9 +4,12 @@
   "description": "fremwork comparator that register stats from know webs and adds static analysis",
   "main": "server/server.js",
   "scripts": {
-    "start": "node .",
-    "dev": "node . --dev",
-    "test": "mocha test"
+    "dev-client": "node . --dev",
+    "dev-server": "nodemon . --dev",
+    "test": "mocha test --recursive",
+    "postinstall": "NODE_ENV=production webpack",
+    "start": "node . --production",
+    "execute-production": "npm install && npm start"
   },
   "repository": {
     "type": "git",
