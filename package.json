@@ -7,9 +7,9 @@
     "dev-client": "node . --dev",
     "dev-server": "nodemon . --dev",
     "test": "mocha test --recursive",
-    "postinstall": "NODE_ENV=production webpack",
+    "compile": "NODE_ENV=production webpack",
     "start": "node . --production",
-    "execute-production": "npm install && npm start"
+    "execute-production": "npm install && npm run compile && npm start"
   },
   "repository": {
     "type": "git",
