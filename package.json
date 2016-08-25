@@ -56,6 +56,8 @@
     "babel-runtime": "^6.0.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "nodegit": "^0.14.1",
+    "plato": "^1.7.0",
     "sails-memory": "^0.10.7",
     "sails-mongo": "^0.12.0",
     "vue": "^1.0.25",

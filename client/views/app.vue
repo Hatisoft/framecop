@@ -14,7 +14,7 @@
             <div id="navbar" class="collapse navbar-collapse" v-if="$auth.ready()">
               <ul class="nav navbar-nav">
                 <li><a v-link="{ path: '/search' } " v-if="!$auth.check()">Search</a></li>
-                <li><a v-link="{ path: '/request' }" v-if="$auth.check()">request</a></li>
+                <li><a v-link="{ path: '/request' }" v-if="!$auth.check()">request</a></li>
                 <li><a v-link="{ path: '/login' }" v-if="!$auth.check()">Login</a></li>
               </ul>
             </div><!--/.nav-collapse -->

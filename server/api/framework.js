@@ -15,6 +15,11 @@ router.post('/', function(req, res) {
         res.send(req.body.name);
 });
 
+router.get('/request', function(req, res) {
+    var url = req.params.url;
+    //clone the repo and run analisys
+});
+
 router.get('/language/:lang/:page', function(req, res) {
     var limit = 10;
     var skip = parseInt(req.params.page, 10) * limit;

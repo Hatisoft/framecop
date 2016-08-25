@@ -32,7 +32,7 @@ router.map({
             require(['./views/request.vue'], resolve);
         },
         name: 'request',
-        auth: true
+        auth: false
     },
     '/framework/:name': {
         component: function (resolve) {
