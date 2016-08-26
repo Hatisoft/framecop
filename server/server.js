@@ -15,7 +15,7 @@ dbInitialization(app);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/api/framework', framework);
+app.use('/api/', framework);
 
 app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname + '/../client/index.html'));

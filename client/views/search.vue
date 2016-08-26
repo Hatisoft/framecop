@@ -10,7 +10,7 @@
 <script>
 module.exports = {
     ready: function() {
-        this.$http.get("/api/framework/language/javascript/0").then(function(response) {
+        this.$http.get("/api/language/javascript/0").then(function(response) {
             console.log(response.data);
             this.frameworks = response.data;
         }, function(response) {

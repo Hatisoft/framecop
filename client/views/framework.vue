@@ -6,7 +6,7 @@
 module.exports = {
     ready: function() {
         var framework = this.$route.params.name;
-        this.$http.get("/api/framework/"+framework).then(function(response) {
+        this.$http.get("/api/"+framework).then(function(response) {
             console.log(response.data);
             this.framework = response.data;
         }, function(response) {

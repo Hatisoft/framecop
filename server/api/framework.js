@@ -17,6 +17,7 @@ router.post('/', function(req, res) {
 
 router.get('/request', function(req, res) {
     var url = req.params.url;
+    res.send();
     //clone the repo and run analisys
 });
 

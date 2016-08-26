@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -15,7 +15,7 @@
               <ul class="nav navbar-nav">
                 <li><a v-link="{ path: '/search' } " v-if="!$auth.check()">Search</a></li>
                 <li><a v-link="{ path: '/request' }" v-if="!$auth.check()">request</a></li>
-                <li><a v-link="{ path: '/login' }" v-if="!$auth.check()">Login</a></li>
+                <!--<li><a v-link="{ path: '/login' }" v-if="!$auth.check()">Login</a></li>-->
               </ul>
             </div><!--/.nav-collapse -->
           </div>
